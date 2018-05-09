@@ -12,9 +12,16 @@
 #import "Downloader.h"
 #import "Uploader.h"
 
+#if __has_include(<React/RCTEventDispatcher.h>)
 #import <React/RCTEventDispatcher.h>
 #import <React/RCTUtils.h>
 #import <React/RCTImageLoader.h>
+#else 
+#import "RCTEventDispatcher.h"
+#import "RCTUtils.h"
+#import "RCTImageLoader.h"
+#endif
+
 
 #import <CommonCrypto/CommonDigest.h>
 #import <Photos/Photos.h>
